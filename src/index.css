@@ -1,13 +1,76 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+#background-img {
+    height: 100vh;
+    width: 100vw;
+    background-image: url("/src/assets/thimo-pedersen-TWCnHKKhqSo-unsplash-min.jpg");
+    background-size: cover;
+    background-position: top;
+    z-index: 0;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo {
+    font-family: 'Creepster';
+    background: rgb(68,219,11);
+    background: linear-gradient(109deg, rgba(68,219,11,1) 0%, rgba(180,180,180,1) 61%, rgba(68,219,11,1) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 2.5rem;
+    margin-left: 10px;
+}
+
+#scores {
+    display: flex;
+    font-size: 2rem;
+    font-family: "creepster";
+    background: rgb(68,219,11);
+    background: linear-gradient(109deg, rgba(68,219,11,1) 0%, rgba(180,180,180,1) 61%, rgba(68,219,11,1) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+#scores > * {
+    margin-right: 5rem;
+}
+
+#cards-grid {
+    padding: 1rem 16rem;
+    display: grid;
+    height: calc(100vh - 10vh);
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    color: white;
+}
+
+#cards-grid-el {
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+}
+
+#cards-grid-el img {
+    transform: scale(3);
 }

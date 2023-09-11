@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { useState, useEffect } from "react";
+import CardsGrid from "./components/CardsGrid";
 
-function App() {
+export default function MemoCa() {
+  const [currentScore, setCurrentScore] = useState(0); //update krna pending
+  const [bestScore, setBestScore] = useState(0); //update krna pending
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div id="background-img">
+        <header>
+          <div id="logo">memoca</div>
+          <div id="scores">
+            <div id="current-score">Current score: {currentScore}</div>
+            <div id="best-score">Your best: {bestScore}</div>
+          </div>
+        </header>
+        <main>
+          <CardsGrid />
+        </main>
+      </div>
+    </>
   );
 }
-
-export default App;
