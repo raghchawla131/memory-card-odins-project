@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import CardsGrid from "./components/CardsGrid";
 
 export default function MemoCa() {
@@ -17,7 +17,12 @@ export default function MemoCa() {
           </div>
         </header>
         <main>
-          <CardsGrid />
+          <CardsGrid 
+            currentScore={currentScore}
+            setCurrentScore={setCurrentScore}
+            bestScore={bestScore}
+            setBestScore={setBestScore}
+          />
         </main>
       </div>
     </>

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-export default function GetPokeData({ pokeId }) {
+export default function GetPokeData({ pokeId, handleClick }) {
   const [pokemon, setPokemon] = useState(null);
 
   const getPokemon = async (id) => {
@@ -11,18 +11,12 @@ export default function GetPokeData({ pokeId }) {
 
   useEffect(() => {
     getPokemon(pokeId);
-  }, []);
+  }, [pokeId]);
 
   return (
     <>
       <div id="cards-grid-el">
-        {pokemon ? (
-          <div>
-            <img src={pokemon.sprites.front_default} />
-          </div>
-        ) : (
-          <p></p>
-        )}
+        {pokemon ? <img src={pokemon.sprites.front_default} /> : <p></p>}
       </div>
     </>
   );

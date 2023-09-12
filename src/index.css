@@ -55,7 +55,7 @@ header {
 }
 
 #cards-grid {
-    padding: 1rem 16rem;
+    padding: 1rem 5rem;
     display: grid;
     height: calc(100vh - 10vh);
     grid-template-rows: 1fr 1fr;
@@ -71,6 +71,31 @@ header {
     margin: 1rem;
 }
 
+#cards-grid button {
+    background-color: transparent;
+    border: none;
+}
+
 #cards-grid-el img {
-    transform: scale(3);
+    transform: scale(2.5);
+}
+
+@media (max-width: 400px) {
+    #logo, #scores {
+        font-size: 1rem;
+    }
+
+    #scores > * {
+        margin: 1rem;
+    }
+
+    #cards-grid {
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        padding: 0;
+    }
+
+    #cards-grid-el img {
+        transform: scale(1.5);
+    }
 }
