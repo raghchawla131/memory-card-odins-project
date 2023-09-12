@@ -16,7 +16,7 @@ export default function GetPokeData({ pokeId, handleClick }) {
   return (
     <>
       <div id="cards-grid-el">
-        {pokemon ? <img src={pokemon.sprites.front_default} /> : <p></p>}
+        {pokemon ? <img src={pokemon.sprites.front_default} alt="poke" /> : <p></p>}
       </div>
     </>
   );
